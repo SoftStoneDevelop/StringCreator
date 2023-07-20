@@ -11,7 +11,7 @@
 
 </h3>
 
-Collect the resulting string without allocating memory.
+Assembling a string with a pre-known resulting string length:  uses 50% less memory then StringBuilder.
 
 ## Benchmark:
 
