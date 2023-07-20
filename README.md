@@ -52,3 +52,17 @@ Assembling a string with a pre-known resulting string length:  uses 50% less mem
 |                     |           |                 |       |           |             |
 |       **StringBuilder** |   **1071741** | **7,858,668.65 ns** |  **1.00** | **4287176 B** |        **1.00** |
 | Class.StringCreator |   1071741 | 7,359,583.80 ns |  0.94 | 2143628 B |        0.50 |
+
+Usage:
+
+```C#
+
+            var stringCreator = new StringCreator.Class.StringCreator(50);
+            for (int i = 0; i < 50; i++)
+            {
+                stringCreator.Append($"{i % 10}");
+            }
+
+            var result = stringCreator.ToString();
+
+```
